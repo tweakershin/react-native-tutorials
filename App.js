@@ -6,6 +6,7 @@ import Bananas from "./src/components/Bananas"; // HelloWorld--> Bananas
 import GreetingGroup from "./src/components/GreetingGroup";
 import BlinkApp from "./src/components/BlinkApp";
 import StyleApp from "./src/components/StyleApp";
+import PracticeBox from "./src/components/PracticeBox";
 
 export default function App() {
   // 함수형 컴포넌트
@@ -17,7 +18,9 @@ export default function App() {
       {/* <Bananas /> */}
       {/* <GreetingGroup /> */}
       {/*<BlinkApp /> */}
-      <StyleApp />
+      {/**/}
+      {/*<StyleApp />*/}
+      <PracticeBox />
     </View>
   );
 }
