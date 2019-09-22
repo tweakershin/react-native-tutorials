@@ -8,7 +8,7 @@ import BlinkApp from "./src/components/BlinkApp";
 import StyleApp from "./src/components/StyleApp";
 import PracticeBox from "./src/components/PracticeBox";
 import FlexDimensionsBasics from "./src/components/FlexDimensioinsBasics";
-
+import FlexPractice from "./src/components/FlexPractice";
 export default function App() {
   // 함수형 컴포넌트
   // JSX 문법
@@ -22,7 +22,8 @@ export default function App() {
       {/*<StyleApp />*/}
       {/*<PracticeBox />*/}
 
-      <FlexDimensionsBasics />
+      {/*<FlexDimensionsBasics />*/}
+      <FlexPractice />
       {/* */}
     </View>
   );
