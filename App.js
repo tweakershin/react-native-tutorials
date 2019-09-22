@@ -9,6 +9,7 @@ import StyleApp from "./src/components/StyleApp";
 import PracticeBox from "./src/components/PracticeBox";
 import FlexDimensionsBasics from "./src/components/FlexDimensioinsBasics";
 import FlexPractice from "./src/components/FlexPractice";
+import BaseTextInput from "./src/components/BaseTextInput";
 export default function App() {
   // 함수형 컴포넌트
   // JSX 문법
@@ -23,7 +24,8 @@ export default function App() {
       {/*<PracticeBox />*/}
 
       {/*<FlexDimensionsBasics />*/}
-      <FlexPractice />
+      {/* <FlexPractice /> */}
+      <BaseTextInput />
       {/* */}
     </View>
   );
