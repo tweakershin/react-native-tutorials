@@ -8,7 +8,9 @@ export default class HelloWorld extends Component {
   render() {
     return (
       <View>
-        <Text style={{ color: "blue", fontSize: 30 }}>Hello World</Text>
+        <Text style={{ color: "red", fontSize: 40, fontStyle: "italic" }}>
+          Hello World
+        </Text>
       </View>
     );
   }
