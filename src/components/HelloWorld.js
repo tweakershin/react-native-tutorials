@@ -7,7 +7,7 @@ export default class HelloWorld extends Component {
   // render함수가 반드시 있어야 함.
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: "green" }}>
         <Text style={{ color: "red", fontSize: 40, fontStyle: "italic" }}>
           Hello World
         </Text>
