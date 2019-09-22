@@ -12,6 +12,7 @@ import FlexPractice from "./src/components/FlexPractice";
 import BaseTextInput from "./src/components/BaseTextInput";
 import ButtonGroup from "./src/components/ButtonGroup";
 import FlatListBasics from "./src/components/FlatListBasics";
+import SectionListBasics from "./src/components/SectionListBasics";
 export default function App() {
   // 함수형 컴포넌트
   // JSX 문법
@@ -29,8 +30,8 @@ export default function App() {
       {/* <FlexPractice /> */}
       {/* <BaseTextInput />*/}
       {/* <ButtonGroup />*/}
-      <FlatListBasics />
-      {/* */}
+      {/*<FlatListBasics /> */}
+      <SectionListBasics />
     </View>
   );
 }
