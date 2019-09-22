@@ -7,6 +7,7 @@ import GreetingGroup from "./src/components/GreetingGroup";
 import BlinkApp from "./src/components/BlinkApp";
 import StyleApp from "./src/components/StyleApp";
 import PracticeBox from "./src/components/PracticeBox";
+import FlexDimensionsBasics from "./src/components/FlexDimensioinsBasics";
 
 export default function App() {
   // 함수형 컴포넌트
@@ -18,9 +19,11 @@ export default function App() {
       {/* <Bananas /> */}
       {/* <GreetingGroup /> */}
       {/*<BlinkApp /> */}
-      {/**/}
       {/*<StyleApp />*/}
-      <PracticeBox />
+      {/*<PracticeBox />*/}
+
+      <FlexDimensionsBasics />
+      {/* */}
     </View>
   );
 }
