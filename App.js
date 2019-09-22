@@ -1,7 +1,8 @@
 import React from "react"; // 반드시 존재해야한다.
 import { StyleSheet, Text, View } from "react-native"; // react-native 컴포넌트 import
 
-import HelloWorld from "./src/components/HelloWorld"; // Component import
+// import HelloWorld from "./src/components/HelloWorld"; // Component import
+import Bananas from "./src/components/Bananas"; // HelloWorld--> Bananas
 
 export default function App() {
   // 함수형 컴포넌트
@@ -10,7 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <HelloWorld></HelloWorld>
+      <Bananas />
     </View>
   );
 }
