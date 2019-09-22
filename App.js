@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from "react-native"; // react-native 컴포넌
 import Bananas from "./src/components/Bananas"; // HelloWorld--> Bananas
 import GreetingGroup from "./src/components/GreetingGroup";
 import BlinkApp from "./src/components/BlinkApp";
+import StyleApp from "./src/components/StyleApp";
 
 export default function App() {
   // 함수형 컴포넌트
@@ -15,7 +16,8 @@ export default function App() {
       {/* <Text>Open up App.js to start working on your app!</Text>
       {/* <Bananas /> */}
       {/* <GreetingGroup /> */}
-      <BlinkApp />
+      {/*<BlinkApp /> */}
+      <StyleApp />
     </View>
   );
 }
