@@ -14,6 +14,9 @@ import ButtonGroup from "./src/components/ButtonGroup";
 import FlatListBasics from "./src/components/FlatListBasics";
 import SectionListBasics from "./src/components/SectionListBasics";
 import MyButton from "./src/components/MyButton";
+
+import Header from "./src/components/Header";
+
 export default function App() {
   // 함수형 컴포넌트
   // JSX 문법
@@ -33,8 +36,11 @@ export default function App() {
       {/* <ButtonGroup />*/}
       {/*<FlatListBasics /> */}
       {/*<SectionListBasics /> */}
+      <Header>헤더컴포넌트</Header>
 
-      <MyButton title="버튼" />
+      {/*<Header title="헤더컴포넌트" color="blue" />*/}
+      <Header title="헤더컴포넌트" style={styles.header} />
+      {/*<MyButton title="버튼" />*/}
     </View>
   );
 }
@@ -46,5 +52,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
+  },
+  header: {
+    color: "orange"
   }
 });
