@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import FlatListItem from "./FlatListItem";
+import AddressSearchInput from "./AddressSearchInput";
 
 let addressBook = [
   {
@@ -39,6 +40,11 @@ export default class FlatListAdvanced extends Component {
       searchText: ""
     };
   }
+
+  setSearchText(text) {
+    this.setState({ searchText: text });
+  }
+
   _renderItem = ({ item, index }) => {
     if (this.state.searchText == "") {
       return <FlatListItem onPress={this.props.onPress} item={item} />;
@@ -59,14 +65,7 @@ export default class FlatListAdvanced extends Component {
           width: "100%"
         }}
       >
-        <TextInput
-          style={{ height: 40, borderWidth: 1 }}
-          placeholder="검색어 입력"
-          onChangeText={text => {
-            this.setState({ searchText: text });
-          }}
-          value={this.state.text}
-        />
+        <AddressSearchInput onChangeText={this.setSearchText.bind(this)} />
 
         <FlatList
           data={addressBook}
