@@ -39,18 +39,37 @@ export default class FlatListAdvanced extends Component {
   }
 
   _renderItem = ({ item, index }) => {
-    return (
-      <TouchableOpacity onPress={this.props.onPress}>
-        <View style={{ flex: 1, flexDirection: "row", padding: 10 }}>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 20 }}>{item.name}</Text>
+    if (this.state.searchText == "") {
+      return (
+        <TouchableOpacity onPress={this.props.onPress}>
+          <View style={{ flex: 1, flexDirection: "row", padding: 10 }}>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 20 }}>{item.name}</Text>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 20 }}>{item.phone}</Text>
+            </View>
           </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 20 }}>{item.phone}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item.name.startsWith(this.state.searchText)) {
+      // if (item.name == this.state.searchText) {
+      return (
+        <TouchableOpacity onPress={this.props.onPress}>
+          <View style={{ flex: 1, flexDirection: "row", padding: 10 }}>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 20 }}>{item.name}</Text>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 20 }}>{item.phone}</Text>
+            </View>
           </View>
-        </View>
-      </TouchableOpacity>
-    );
+        </TouchableOpacity>
+      );
+    } else {
+      return <View />;
+    }
   };
 
   render() {
@@ -67,7 +86,6 @@ export default class FlatListAdvanced extends Component {
           placeholder="검색어 입력"
           onChangeText={text => {
             this.setState({ searchText: text });
-            console.log(this.state.searchText);
           }}
           value={this.state.text}
         />
