@@ -7,6 +7,8 @@ import {
   TextInput
 } from "react-native";
 
+import FlatListItem from "./FlatListItem";
+
 let addressBook = [
   {
     name: "영수",
@@ -37,41 +39,17 @@ export default class FlatListAdvanced extends Component {
       searchText: ""
     };
   }
-
   _renderItem = ({ item, index }) => {
     if (this.state.searchText == "") {
-      return (
-        <TouchableOpacity onPress={this.props.onPress}>
-          <View style={{ flex: 1, flexDirection: "row", padding: 10 }}>
-            <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 20 }}>{item.name}</Text>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 20 }}>{item.phone}</Text>
-            </View>
-          </View>
-        </TouchableOpacity>
-      );
+      return <FlatListItem onPress={this.props.onPress} item={item} />;
     }
     if (item.name.startsWith(this.state.searchText)) {
       // if (item.name == this.state.searchText) {
-      return (
-        <TouchableOpacity onPress={this.props.onPress}>
-          <View style={{ flex: 1, flexDirection: "row", padding: 10 }}>
-            <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 20 }}>{item.name}</Text>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 20 }}>{item.phone}</Text>
-            </View>
-          </View>
-        </TouchableOpacity>
-      );
+      return <FlatListItem onPress={this.props.onPress} item={item} />;
     } else {
       return <View />;
     }
   };
-
   render() {
     return (
       <View
