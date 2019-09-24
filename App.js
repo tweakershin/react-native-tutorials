@@ -13,6 +13,7 @@ import BaseTextInput from "./src/components/BaseTextInput";
 import ButtonGroup from "./src/components/ButtonGroup";
 import FlatListBasics from "./src/components/FlatListBasics";
 import SectionListBasics from "./src/components/SectionListBasics";
+import MyButton from "./src/components/MyButton";
 export default function App() {
   // 함수형 컴포넌트
   // JSX 문법
@@ -31,7 +32,9 @@ export default function App() {
       {/* <BaseTextInput />*/}
       {/* <ButtonGroup />*/}
       {/*<FlatListBasics /> */}
-      <SectionListBasics />
+      {/*<SectionListBasics /> */}
+
+      <MyButton title="버튼" />
     </View>
   );
 }
