@@ -16,6 +16,7 @@ import SectionListBasics from "./src/components/SectionListBasics";
 import MyButton from "./src/components/MyButton";
 
 import Header from "./src/components/Header";
+import FlatListAdvanced from "./src/components/FlatListAdvanced";
 
 export default function App() {
   // 함수형 컴포넌트
@@ -36,11 +37,12 @@ export default function App() {
       {/* <ButtonGroup />*/}
       {/*<FlatListBasics /> */}
       {/*<SectionListBasics /> */}
-      <Header>헤더컴포넌트</Header>
+      {/*<SectionListBasics /> */}
 
       {/*<Header title="헤더컴포넌트" color="blue" />*/}
-      <Header title="헤더컴포넌트" style={styles.header} />
       {/*<MyButton title="버튼" />*/}
+
+      <FlatListAdvanced />
     </View>
   );
 }
